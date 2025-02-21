@@ -36,5 +36,8 @@ cd ./nvim-install; ./install.sh; cd ..
 cd ./tmux-conf; ./install.sh; cd ..
 cd ./zsh; echo 'y\n' | ./install.sh; cd ..
 
-nvim
+if [ -z "$NON_INTERACTIVE_INSTALL" ]; then
+    nvim
+fi
+
 zsh
